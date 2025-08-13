@@ -13,16 +13,14 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
+            margin: 0; /* Ensure no default body margin */
         }
         .container {
-            max-width: 480px;
-            margin: 0 auto;
+            width: 100%;
             height: 100vh;
             display: flex;
             flex-direction: column;
-            padding: 0.5rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: white;
         }
         .scrollable-content {
             overflow-y: auto;
@@ -50,14 +48,14 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100">
 
-    <div class="container bg-white rounded-3xl">
+    <div class="container">
 
         <!-- Top Bar with App Name and Subject Buttons -->
-        <header class="p-4 bg-white rounded-t-3xl sticky top-0 z-10">
+        <header class="p-4 bg-white sticky top-0 z-10 border-b border-gray-200">
             <h1 class="text-2xl font-bold text-gray-800 text-center mb-4">Your Personal Career Assistant</h1>
-            <div class="flex justify-between items-center space-x-2 overflow-x-auto pb-2 -mx-4 px-4">
+            <div class="flex items-center space-x-2 overflow-x-auto pb-2 -mx-4 px-4">
                 <button class="flex-shrink-0 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-full shadow-lg transition duration-200 hover:bg-indigo-700 active:bg-indigo-800">
                     AI Basics
                 </button>
@@ -101,6 +99,37 @@
                         <p class="text-sm text-gray-600 leading-relaxed">
                             Focus on a single, manageable step at a time. This roadmap is designed to break down your transition into clear, actionable goals. Start by exploring the "AI Basics" course below to build a solid foundation. Celebrating small victories will help reduce anxiety and build confidence.
                         </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Learning Roadmap Completion Rates Section -->
+            <section class="bg-indigo-50 p-6 rounded-2xl shadow-inner border border-indigo-200">
+                <h2 class="text-xl font-semibold text-gray-800 flex items-center mb-3">
+                    <svg class="w-6 h-6 mr-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m6 0h4M3 12h4m6 0h4M3 16h4m6 0h4M3 20h4m6 0h4M10 8V4m4 4V4"></path></svg>
+                    Learning Roadmap Progress
+                </h2>
+                <div class="bg-white p-4 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-lg font-medium text-gray-700 mb-2">Completion Rate</h3>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 45%"></div>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2">45% of your AI & GenAI roadmap completed.</p>
+                </div>
+            </section>
+
+            <!-- Newly Acquired Skills Section -->
+            <section class="bg-emerald-50 p-6 rounded-2xl shadow-inner border border-emerald-200">
+                <h2 class="text-xl font-semibold text-gray-800 flex items-center mb-3">
+                    <svg class="w-6 h-6 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Newly Acquired Skills
+                </h2>
+                <div class="bg-white p-4 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-lg font-medium text-gray-700 mb-2">My Skill Badges</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full">Python for AI</span>
+                        <span class="px-3 py-1 text-sm font-medium bg-green-100 text-green-800 rounded-full">Neural Networks</span>
+                        <span class="px-3 py-1 text-sm font-medium bg-purple-100 text-purple-800 rounded-full">Prompt Engineering</span>
                     </div>
                 </div>
             </section>
