@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Career Assistant</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .scrollable-content {
+            overflow-y: auto;
+            flex-grow: 1;
+            padding-bottom: 1rem;
+        }
+        .selected-item {
+            border: 2px solid #3b82f6; /* Blue border for selected items */
+            background-color: #e0f2fe; /* Light blue background for selected items */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="container bg-white rounded-3xl">
+
+        <!-- Top Bar with App Name and Subject Buttons -->
+        <header class="p-4 bg-white rounded-t-3xl sticky top-0 z-10">
+            <h1 class="text-2xl font-bold text-gray-800 text-center mb-4">Your Personal Career Assistant</h1>
+            <div class="flex justify-between items-center space-x-2 overflow-x-auto pb-2 -mx-4 px-4">
+                <button class="flex-shrink-0 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-full shadow-lg transition duration-200 hover:bg-indigo-700 active:bg-indigo-800">
+                    AI Basics
+                </button>
+                <button class="flex-shrink-0 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-full shadow-md transition duration-200 hover:bg-gray-300">
+                    GenAI
+                </button>
+                <button class="flex-shrink-0 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-full shadow-md transition duration-200 hover:bg-gray-300">
+                    Data Science
+                </button>
+                <button class="flex-shrink-0 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-full shadow-md transition duration-200 hover:bg-gray-300">
+                    LLMs
+                </button>
+            </div>
+        </header>
+
+        <main class="scrollable-content p-4 space-y-6">
+
+            <!-- Emotional Coefficients & Pathways Section -->
+            <section class="bg-blue-50 p-6 rounded-2xl shadow-inner border border-blue-200">
+                <h2 class="text-xl font-semibold text-gray-800 flex items-center mb-3">
+                    <svg class="w-6 h-6 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1m-1.636 6.364l-.707-.707M12 21v-1m-4.673-1h4.673m-6.364-1.636l.707-.707M3 12H4m1.636-6.364l.707.707M6 18H5M7 15H6m1-2H6m1-2H6m1-2H6m1-2H6m1-2H6m1-2H6"></path></svg>
+                    Well-being Check
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded-xl shadow-md border border-gray-200">
+                        <h3 class="text-lg font-medium text-gray-700 mb-2">Current Emotional Coefficients</h3>
+                        <ul class="text-sm space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 rounded-full bg-red-500 mr-2"></span> Anxiety: <span class="font-bold ml-1">High</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 rounded-full bg-yellow-400 mr-2"></span> Uncertainty: <span class="font-bold ml-1">Medium</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 rounded-full bg-green-500 mr-2"></span> Motivation: <span class="font-bold ml-1">High</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-md border border-gray-200">
+                        <h3 class="text-lg font-medium text-gray-700 mb-2">Clear Pathways to Reduce Anxiety</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Focus on a single, manageable step at a time. This roadmap is designed to break down your transition into clear, actionable goals. Start by exploring the "AI Basics" course below to build a solid foundation. Celebrating small victories will help reduce anxiety and build confidence.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personalized Learning Roadmap Section -->
+            <section class="space-y-4">
+                <h2 class="text-xl font-semibold text-gray-800 flex items-center mb-3">
+                    <svg class="w-6 h-6 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    Personalized Learning Roadmap
+                </h2>
+
+                <div id="learning-resources" class="space-y-4">
+                    <!-- Courses Section -->
+                    <div class="bg-white p-4 rounded-2xl shadow-md border border-gray-200">
+                        <h3 class="font-bold text-gray-700 mb-2 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.447 9.58 5 8 5c-3.41 0-6 2.5-6 6s2.59 6 6 6c1.58 0 2.832-.447 4-1.253M12 6.253c1.168.806 2.42 1.253 4 1.253 3.41 0 6-2.5 6-6S18.59 1 15 1c-1.58 0-2.832.447-4 1.253"></path></svg>
+                            Online Courses
+                        </h3>
+                        <ul id="courses-list" class="space-y-2">
+                            <li class="p-3 bg-gray-50 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 transition-colors" data-source="Udemy">
+                                <span class="block font-medium text-gray-800">Udemy: The AI & GenAI Masterclass</span>
+                                <span class="block text-sm text-gray-500">A project-based course for hands-on learning.</span>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 transition-colors" data-source="Coursera">
+                                <span class="block font-medium text-gray-800">Coursera: Deep Learning Specialization</span>
+                                <span class="block text-sm text-gray-500">Taught by Andrew Ng, covers foundational concepts.</span>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 transition-colors" data-source="Coursera">
+                                <span class="block font-medium text-gray-800">Coursera: Generative AI with Large Language Models</span>
+                                <span class="block text-sm text-gray-500">In-depth look at LLMs and their applications.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- YouTube Videos Section -->
+                    <div class="bg-white p-4 rounded-2xl shadow-md border border-gray-200">
+                        <h3 class="font-bold text-gray-700 mb-2 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m-1-4v4m0-4h-4m4 4h-4m4-4h.01M9 14H5"></path></svg>
+                            YouTube Videos
+                        </h3>
+                        <ul id="youtube-list" class="space-y-2">
+                            <li class="p-3 bg-gray-50 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 transition-colors" data-source="YouTube">
+                                <span class="block font-medium text-gray-800">AI Explained: The Future of Generative AI</span>
+                                <span class="block text-sm text-gray-500">High-level overview of current trends.</span>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 transition-colors" data-source="YouTube">
+                                <span class="block font-medium text-gray-800">3Blue1Brown: Neural Networks Explained</span>
+                                <span class="block text-sm text-gray-500">Intuitive explanations with stunning visuals.</span>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 transition-colors" data-source="YouTube">
+                                <span class="block font-medium text-gray-800">Lex Fridman: AI Conversations with Experts</span>
+                                <span class="block text-sm text-gray-500">Long-form interviews with leading researchers.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Books & Papers Section -->
+                    <div class="bg-white p-4 rounded-2xl shadow-md border border-gray-200">
+                        <h3 class="font-bold text-gray-700 mb-2 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.447 9.58 5 8 5c-3.41 0-6 2.5-6 6s2.59 6 6 6c1.58 0 2.832-.447 4-1.253M12 6.253c1.168.806 2.42 1.253 4 1.253 3.41 0 6-2.5 6-6S18.59 1 15 1c-1.58 0-2.832.447-4 1.253"></path></svg>
+                            Books & Papers
+                        </h3>
+                        <ul id="books-papers-list" class="space-y-2">
+                            <li class="p-3 bg-gray-50 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 transition-colors" data-source="Textbook">
+                                <span class="block font-medium text-gray-800">Textbook: "Deep Learning" by Goodfellow et al.</span>
+                                <span class="block text-sm text-gray-500">The authoritative resource for deep learning.</span>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 transition-colors" data-source="Reference Book">
+                                <span class="block font-medium text-gray-800">Reference Book: "AI Superpowers" by Kai-Fu Lee</span>
+                                <span class="block text-sm text-gray-500">Geopolitical and economic context of AI.</span>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 transition-colors" data-source="Research Paper">
+                                <span class="block font-medium text-gray-800">Research Paper: "Attention Is All You Need"</span>
+                                <span class="block text-sm text-gray-500">The foundational paper on the Transformer architecture.</span>
+                            </li>
+                            <li class="p-3 bg-gray-50 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 transition-colors" data-source="Market Study">
+                                <span class="block font-medium text-gray-800">Gartner Report: Hype Cycle for AI, 2024</span>
+                                <span class="block text-sm text-gray-500">Analyzes emerging technologies and their maturity.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Market Study Section -->
+                    <div class="bg-white p-4 rounded-2xl shadow-md border border-gray-200">
+                        <h3 class="font-bold text-gray-700 mb-2 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0h6m-9-4h.01M15 15h.01"></path></svg>
+                            Market Studies
+                        </h3>
+                        <ul id="market-study-list" class="space-y-2">
+                             <li class="p-3 bg-gray-50 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 transition-colors" data-source="Market Study">
+                                <span class="block font-medium text-gray-800">BCG Report: The Generative AI Opportunity</span>
+                                <span class="block text-sm text-gray-500">Strategic guide for businesses adopting GenAI.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Add More Sources Button -->
+                    <div class="flex justify-center mt-6">
+                        <button id="add-more-btn" class="flex items-center px-6 py-3 bg-indigo-500 text-white font-semibold rounded-full shadow-lg transition duration-200 hover:bg-indigo-600 active:bg-indigo-700">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                            Add More Sources
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addMoreBtn = document.getElementById('add-more-btn');
+            const learningResourcesContainer = document.getElementById('learning-resources');
+            let selectedItem = null;
+
+            // Handle selecting a list item
+            learningResourcesContainer.addEventListener('click', (e) => {
+                const li = e.target.closest('li');
+                if (!li) return;
+
+                // Remove 'selected-item' class from the previous selected item
+                if (selectedItem) {
+                    selectedItem.classList.remove('selected-item');
+                }
+
+                // Add 'selected-item' class to the new item
+                li.classList.add('selected-item');
+                selectedItem = li;
+
+                const itemName = li.querySelector('span:first-of-type').textContent;
+                console.log(`User selected: ${itemName}`);
+                // In a real app, you would navigate to the resource or show more details
+            });
+
+            // Handle adding more sources
+            addMoreBtn.addEventListener('click', () => {
+                const newSourceText = `New Source Added: Market Research`;
+                const newSourceDesc = `A new dynamically added market study.`;
+                const newSourceHtml = `
+                    <li class="p-3 bg-gray-50 rounded-lg shadow-sm cursor-pointer hover:bg-gray-100 transition-colors" data-source="Market Study">
+                        <span class="block font-medium text-gray-800">${newSourceText}</span>
+                        <span class="block text-sm text-gray-500">${newSourceDesc}</span>
+                    </li>
+                `;
+                const marketStudyList = document.getElementById('market-study-list');
+                marketStudyList.insertAdjacentHTML('beforeend', newSourceHtml);
+            });
+        });
+    </script>
+</body>
+</html>
