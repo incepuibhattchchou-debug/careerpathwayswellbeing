@@ -1,0 +1,81 @@
+ui_template:
+  header:
+    app_name: "Your Tech Edge"
+    subject_buttons:
+      - label: "Machine Learning"
+        is_active: true
+      - label: "Cybersecurity"
+        is_active: false
+      - label: "Cloud Computing"
+        is_active: false
+      - label: "Web Development"
+        is_active: false
+
+  sections:
+    - title: "Well-being Check"
+      components:
+        - type: "emotional_coefficients"
+          heading: "Current Emotional Coefficients"
+          data:
+            - label: "Anxiety"
+              level: "High"
+              color: "red"
+            - label: "Motivation"
+              level: "High"
+              color: "green"
+            - label: "Uncertainty"
+              level: "Medium"
+              color: "yellow"
+        - type: "text_block"
+          heading: "Managing Pre-Internship Anxiety"
+          content: "High anxiety and high motivation is a common state for ambitious students. Structure is your best tool. Focus on the 'ML Fundamentals' course to solidify your knowledge. Completing each module is a concrete step toward being technically prepared for interviews, which will help reduce anxiety."
+
+    - title: "Learning Roadmap Progress"
+      components:
+        - type: "progress_bar"
+          heading: "Completion Rate"
+          value: 60
+          total: 100
+          label: "60% of your Machine Learning roadmap completed."
+
+    - title: "Newly Acquired Skills"
+      components:
+        - type: "skill_badges"
+          heading: "My Skill Badges"
+          data:
+            - "Python (Scikit-learn)"
+            - "TensorFlow Basics"
+            - "Data Wrangling (Pandas)"
+            - "Linear Algebra"
+
+    - title: "Personalized Learning Roadmap"
+      components:
+        - type: "learning_list"
+          heading: "Online Courses"
+          data:
+            - title: "Coursera: Machine Learning Specialization"
+              description: "The classic Stanford course by Andrew Ng."
+              source: "Coursera"
+            - title: "fast.ai: Practical Deep Learning for Coders"
+              description: "A top-down, code-first approach."
+              source: "fast.ai"
+        - type: "learning_list"
+          heading: "YouTube Channels"
+          data:
+            - title: "StatQuest with Josh Starmer"
+              description: "Breaks down complex stats and ML concepts simply."
+              source: "YouTube"
+        - type: "learning_list"
+          heading: "Books & Papers"
+          data:
+            - title: "Textbook: 'Hands-On Machine Learning' by Aurélien Géron"
+              description: "Code-focused and practical guide."
+              source: "Textbook"
+            - title: "Research Paper: 'ImageNet Classification with Deep CNNs'"
+              description: "The AlexNet paper that kicked off the deep learning boom."
+              source: "Research Paper"
+
+  actions:
+    - type: "button"
+      label: "Add More Sources"
+      action: "add_source"
