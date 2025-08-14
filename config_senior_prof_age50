@@ -1,0 +1,77 @@
+ui_template:
+  header:
+    app_name: "Your Leadership Navigator"
+    subject_buttons:
+      - label: "AI Strategy"
+        is_active: true
+      - label: "Digital Transformation"
+        is_active: false
+      - label: "Change Management"
+        is_active: false
+      - label: "Future of Work"
+        is_active: false
+
+  sections:
+    - title: "Strategic Readiness"
+      components:
+        - type: "emotional_coefficients"
+          heading: "Leadership Sentiments"
+          data:
+            - label: "Motivation"
+              level: "High"
+              color: "green"
+            - label: "Uncertainty"
+              level: "Medium"
+              color: "yellow"
+            - label: "Confidence"
+              level: "Medium"
+              color: "yellow"
+        - type: "text_block"
+          heading: "Leading Through Technological Change"
+          content: "Your motivation to lead the organization forward is clear. To build confidence and reduce uncertainty, focus on high-level strategic frameworks. The 'AI for Everyone' course is a perfect, non-technical starting point to understand the business implications of AI, enabling you to ask the right questions of your technical teams."
+
+    - title: "Strategic Initiative Progress"
+      components:
+        - type: "progress_bar"
+          heading: "Knowledge Acquisition"
+          value: 25
+          total: 100
+          label: "25% of your AI Strategy initiative covered."
+
+    - title: "New Leadership Competencies"
+      components:
+        - type: "skill_badges"
+          heading: "My Competencies"
+          data:
+            - "AI for Business Leaders"
+            - "Strategic Planning"
+            - "Digital Literacy"
+
+    - title: "Personalized Strategic Briefing"
+      components:
+        - type: "learning_list"
+          heading: "Executive Education"
+          data:
+            - title: "Coursera: AI For Everyone by Andrew Ng"
+              description: "The quintessential course for non-technical leaders."
+              source: "Coursera"
+            - title: "MIT Sloan: AI: Implications for Business Strategy"
+              description: "An executive program on integrating AI strategy."
+              source: "MIT Sloan"
+        - type: "learning_list"
+          heading: "Books & Market Studies"
+          data:
+            - title: "Book: 'Competing in the Age of AI' by Iansiti & Lakhani"
+              description: "A Harvard Business School book on strategy and execution."
+              source: "Book"
+            - title: "Gartner Report: Hype Cycle for AI, 2025"
+              description: "Essential for distinguishing hype from real business value."
+              source: "Market Study"
+            - title: "BCG Report: The Generative AI Opportunity"
+              description: "A strategic guide for businesses adopting GenAI."
+              source: "Market Study"
+
+  actions:
+    - type: "button"
+      label: "Request Deeper Analysis"
+      action: "add_source"
