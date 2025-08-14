@@ -1,0 +1,77 @@
+ui_template:
+  header:
+    app_name: "Your Creative Future"
+    subject_buttons:
+      - label: "Digital Art"
+        is_active: true
+      - label: "Game Design"
+        is_active: false
+      - label: "Creative Writing"
+        is_active: false
+      - label: "Music Production"
+        is_active: false
+
+  sections:
+    - title: "Vibe Check"
+      components:
+        - type: "emotional_coefficients"
+          heading: "How You're Feeling"
+          data:
+            - label: "Excitement"
+              level: "High"
+              color: "green"
+            - label: "Uncertainty"
+              level: "Medium"
+              color: "yellow"
+            - label: "Pressure"
+              level: "Low"
+              color: "blue"
+        - type: "text_block"
+          heading: "Channel That Excitement!"
+          content: "It's awesome that you're so excited to dive in! The best way to start is by just playing around. Don't worry about making a masterpiece. Try the 'Intro to Procreate' video below to learn some cool tricks. The goal is to have fun and see what you can create."
+
+    - title: "Quest Log"
+      components:
+        - type: "progress_bar"
+          heading: "Progress"
+          value: 15
+          total: 100
+          label: "15% of your Digital Art quest completed."
+
+    - title: "New Powers Unlocked"
+      components:
+        - type: "skill_badges"
+          heading: "My Skills"
+          data:
+            - "Digital Sketching"
+            - "Color Theory Basics"
+            - "Layering Techniques"
+
+    - title: "Your Adventure Map"
+      components:
+        - type: "learning_list"
+          heading: "YouTube Tutorials"
+          data:
+            - title: "Art with Flo: Intro to Procreate"
+              description: "A fun, follow-along tutorial for beginners."
+              source: "YouTube"
+            - title: "Brad's Art School: You Can Draw in 30 Days"
+              description: "Great for building fundamental drawing skills."
+              source: "YouTube"
+        - type: "learning_list"
+          heading: "Fun Projects"
+          data:
+            - title: "Skillshare: Create a Fun Character"
+              description: "Learn to design your own unique character from scratch."
+              source: "Skillshare"
+        - type: "learning_list"
+          heading: "Books & Mags"
+          data:
+            - title: "Book: 'The Animator's Survival Kit' by Richard Williams"
+              description: "A legendary book, even for digital art."
+              source: "Book"
+
+  actions:
+    - type: "button"
+      label: "Find More Cool Stuff"
+      action: "add_source"
