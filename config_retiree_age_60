@@ -1,0 +1,80 @@
+ui_template:
+  header:
+    app_name: "Your Curiosity Companion"
+    subject_buttons:
+      - label: "Digital Photography"
+        is_active: true
+      - label: "Genealogy"
+        is_active: false
+      - label: "Creative Writing"
+        is_active: false
+      - label: "History"
+        is_active: false
+
+  sections:
+    - title: "Today's Mood"
+      components:
+        - type: "emotional_coefficients"
+          heading: "Current Feelings"
+          data:
+            - label: "Curiosity"
+              level: "High"
+              color: "green"
+            - label: "Relaxation"
+              level: "High"
+              color: "blue"
+            - label: "Frustration"
+              level: "Low"
+              color: "yellow"
+        - type: "text_block"
+          heading: "Embrace the Joy of Learning"
+          content: "It's wonderful that you're exploring a new hobby! The best approach is to take it one step at a time and enjoy the process. Don't worry about technical jargon. The 'Basics of Composition' video is a great, non-technical place to start improving your photos today."
+
+    - title: "Hobby Progress"
+      components:
+        - type: "progress_bar"
+          heading: "Exploration"
+          value: 10
+          total: 100
+          label: "10% of your photography journey explored."
+
+    - title: "New Skills"
+      components:
+        - type: "skill_badges"
+          heading: "My New Talents"
+          data:
+            - "Understanding Exposure"
+            - "Rule of Thirds"
+            - "Basic Photo Editing"
+
+    - title: "Your Learning Path"
+      components:
+        - type: "learning_list"
+          heading: "YouTube Guides"
+          data:
+            - title: "The Art of Photography: Basics of Composition"
+              description: "Simple tips to make your photos more beautiful."
+              source: "YouTube"
+            - title: "Tony & Chelsea Northrup: Camera Basics"
+              description: "Clear explanations of what all the buttons do."
+              source: "YouTube"
+        - type: "learning_list"
+          heading: "Books & Magazines"
+          data:
+            - title: "Book: 'Understanding Exposure' by Bryan Peterson"
+              description: "The most recommended book for beginner photographers."
+              source: "Book"
+            - title: "National Geographic"
+              description: "A wonderful source of inspiration for beautiful photos."
+              source: "Magazine"
+        - type: "learning_list"
+          heading: "Local Workshops"
+          data:
+            - title: "Community Center: Intro to Digital Photography"
+              description: "Check for local classes to learn with others."
+              source: "Workshop"
+
+  actions:
+    - type: "button"
+      label: "Discover More Hobbies"
+      action: "add_source"
